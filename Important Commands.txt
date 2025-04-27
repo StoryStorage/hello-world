@@ -15,7 +15,8 @@ General uses
  git pull : takes all the updates on the github and merges with the local directory. A combination of "fetch" and "merge"
 
 Branches
-- Creating branches allows you to develop on a seperate area before merging back into the main branch
+- Creating branches allows you to develop on a seperate area before merging back into the main branch.
+  All files on the current branch will be added to the new branch.
 
  git branch <new_branch> : creates a new branch. Just inputting "git branch" lists all branches and currently active one
  
@@ -25,4 +26,6 @@ Branches
  
  git branch -d <branch_id> : deletes the inputed branch
 
- merge conflicts: They occur when the same file(s) in two branches have been updated separately, then attempted to merge together. When "git merge" is called, it will add the difference into the conflicted file. Go into the file to select which one to keep and then merge again to fix the conflict.  
+ merge conflicts: They occur when the same file(s) in two branches have been updated separately, then attempted to merge together. When "git merge" is called, it will add the difference into the conflicted file. Go into the file to select which one to keep and then commit the changes. Merge again to fix the conflict.  
+
+ data might delete: data will be deleted if a file is edited in one branch and it's data is not staged or committed. If you then switch branches into another with the same file name but different data, the data from the unstaged, uncommitted file will be deleted. To prevent this, always stage and commit before moving branches
