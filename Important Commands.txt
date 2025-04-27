@@ -1,0 +1,26 @@
+General uses
+- Most commonly used commands for any situation
+ git status : checks the working directory and staging area to see what changes are staged and sees if you're up to date on tracking
+
+ git add . : adds all files to the staging area for future committing. You can unstage with "git restore --staged "file_name"
+
+ git commit -m "" : commits all the staged changes. It's also proper ettiqute to include a message with the commmit. It's also possible to revert the directory to a previous committed version with "git reset/checkout <commit-id>". This id is found using "git log --oneline". press "q" to quit out 
+
+ git log --oneline : returns a list of all the commits from the directory/branch. 
+
+ git reset <commit-id> : reverts directory to previous commit id
+
+Branches
+- Creating branches allows you to develop on a seperate area before merging back into the main branch
+
+ git branch <new_branch> : creates a new branch. Just inputting "git branch" lists all branches and currently active one
+ 
+ git switch/checkout <branch_id> : switches to that branch, can use "switch" or "checkout" with "switch" being the newer process
+
+ git merge -m "" <branch_id> : merges the NAMED branch into the CURRENT branch. E.g. if you are in the main branch, merging main with a test branch will take all of test branch and merge into main.
+ 
+ git branch -d <branch_id> : deletes the inputed branch
+
+ merge conflicts: They occur when the same file(s) in two branches have been updated separately, then attempted to merge together. When "git merge" is called, it will add the difference into the conflicted file. Go into the file to select which one to keep and then merge again to fix the conflict.  
+
+ git push : takes all the commits and pushes them into github
